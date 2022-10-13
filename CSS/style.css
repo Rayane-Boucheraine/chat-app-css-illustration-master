@@ -1,0 +1,362 @@
+:root {
+    --PaleViolet: hsl(276, 100%, 81%);
+    --ModerateViolet: hsl(276, 55%, 52%);
+    --DesaturatedDarkViolet: hsl(271, 15%, 43%);
+    --GrayishBlue: hsl(206, 6%, 79%);
+    --VeryDarkDesaturatedViolet: hsl(271, 36%, 24%);
+    --DarkGrayishViolet: hsl(270, 7%, 64%);
+    --LightMagenta: hsl(293, 100%, 63%);
+    --LightViolet: hsl(264, 100%, 61%);
+    --White: hsl(0, 0%, 100%);
+    --LightGrayishViolet: hsl(270, 20%, 96%);
+    --VeryDarkDesaturatedViolet: hsl(271, 36%, 24%);
+    --VeryLightMagenta: hsl(289, 100%, 72%);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: var(--LightGrayishViolet);
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+}
+.back1 {
+    position: relative;
+    left: -80px;
+    width: 32%;
+    height: 55vh;
+    background-color: var(--ModerateViolet);
+    z-index: -2;
+}
+.back1::after {
+    content: "";
+    position: absolute;
+    bottom: -250px;
+    width: 100%;
+    height: 250px;
+    background-color: var(--ModerateViolet);
+    border-radius: 0 0 250px 250px;
+}
+.back2 {
+    position: absolute;
+    right: -140px;
+    bottom: 0;
+    width: 32%;
+    height: 55vh;
+    background-color: hsla(206, 7%, 79%, 0.11);
+    z-index: -2;
+}
+.back2::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    background-color: hsla(206, 7%, 79%, 0.11);
+    top: -250px;
+    border-radius: 250px 250px 0 0;
+}
+main {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 64.9%;
+    gap: 150px;
+}
+main .chatbox {
+    position: relative;
+    background-color: var(--White);
+    padding: 10px;
+    border-radius: 20px;
+    width: 310px;
+    margin-left: 80px;
+    box-shadow: 0 0 40px 0 rgba(128, 128, 128, 0.61);
+}
+main .chatbox .header {
+    position: relative;
+    padding: 42px 22px 13px;
+    background-image: linear-gradient(to right, var(--LightViolet), var(--LightMagenta));
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main .chatbox .header::before {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 35px;
+    background-color: var(--White);
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 14px;
+}
+main .chatbox .header .begin-of-header {
+    display: flex;
+    align-items: center;
+}
+main .chatbox .header .begin-of-header i {
+    padding-right: 12px;
+    color: var(--White);
+    font-size: 13px;
+    cursor: pointer;
+}
+main .chatbox .header .begin-of-header .person {
+    display: flex;
+    align-items: center;
+}
+main .chatbox .header .begin-of-header .person p {
+    color: var(--White);
+    font-size: 15px;
+    font-weight: 500;
+}
+main .chatbox .header .begin-of-header .person p span {
+    display: block;
+    color: rgba(255, 255, 255, 0.404);
+    font-weight: lighter;
+    font-size: 11.5px;
+    padding-top: 2px;
+}
+main .chatbox .header .begin-of-header .person img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 1px solid var(--White);
+    margin-right: 8px;
+    cursor: pointer;
+}
+main .chatbox .header > i {
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+main .chatbox .content {
+    background-color: var(--LightGrayishViolet);
+    padding: 12px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+}
+main .chatbox .content p:nth-of-type(1),
+main .chatbox .content p:nth-of-type(2),
+main .chatbox .content p:nth-of-type(5) {
+    background-color: hsla(206, 7%, 79%, 0.295);
+    display: flex;
+    color: var(--ModerateViolet);
+    margin-bottom: 12px;
+    width: 60%;
+    padding: 8px;
+    line-height: 1.5;
+    border-radius: 10px;
+    font-size: 10px;
+}
+main .chatbox .content p:nth-of-type(3),
+main .chatbox .content p:nth-of-type(4) {
+    background-color: var(--White);
+    display: flex;
+    align-self: flex-end;
+    margin-bottom: 8px;
+    width: 60%;
+    padding: 11px;
+    font-size: 10px;
+    line-height: 1.5;
+    border-radius: 15px;
+}
+main .chatbox .content p:nth-of-type(4) {
+    width: fit-content;
+}
+main .chatbox .content .images{
+    display: flex;
+    align-self: flex-end;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+main .chatbox .content .images img {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+}
+main .chatbox .content .price1,
+main .chatbox .content .price2 {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to right, var(--LightMagenta), var(--LightViolet));
+    width: 70%;
+    margin-bottom: 10px;
+    padding: 8px 20px 8px 8px;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 10px;
+}
+main .chatbox .content .price1:hover,
+main .chatbox .content .price2:hover {
+    background-image: linear-gradient(to right, var(--LightViolet), var(--LightMagenta));
+}
+main .chatbox .content .price1 span:nth-of-type(1),
+main .chatbox .content .price2 span:nth-of-type(1) {
+    width: 10px;
+    height: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: transparent;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+main .chatbox .content .price1 span:nth-of-type(2),
+main .chatbox .content .price2 span:nth-of-type(2) {
+    color: var(--White);
+    margin-left: auto;
+    font-size: 14px;
+    font-weight: bold;
+}
+main .chatbox .content form {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: var(--White);
+    width: 100%;
+    border-radius: 25px;
+    margin-top: 10px;
+}
+main .chatbox .content form input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 12px 12px 12px 25px;
+}
+main .chatbox .content form input::placeholder {
+    font-size: 12px;
+    color: rgba(128, 128, 128, 0.404);
+}
+main .chatbox .content form i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 28px;
+    background-color: var(--VeryDarkDesaturatedViolet);
+    color: white;
+    border-radius: 50%;
+    margin-right: 6px;
+    font-size: 12px;
+    cursor: pointer;
+}
+main .text h2 {
+    color: var(--VeryDarkDesaturatedViolet);
+    margin-bottom: 20px;
+    font-size: 40px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+main .text p {
+    color: var(--DarkGrayishViolet);
+    line-height: 1.7;
+    font-size: 15.5px;
+}
+@media (max-width: 767px) {
+    .back1,
+    .back2 {
+        width: 100%;
+        height: 20vh;
+    }
+    .back1 {
+        left: 0;
+    }
+    .back1::after {
+        bottom: -248px;
+    }
+    .back2 {
+        right: 0;
+    }
+    main {
+        flex-direction: column;
+        width: 100%;
+        gap: 35px;
+    }
+    main .chatbox {
+        margin-left: 0;
+        width: 270px;
+    }
+    main .chatbox .content {
+        width: 250px;
+    }
+    main .chatbox .header {
+        padding: 24px 22px 13px;
+    }
+    main .chatbox .header::before {
+        height: 25px;
+    }
+    main .chatbox .header .begin-of-header i {
+        font-size: 10px;
+    }
+    main .chatbox .header .begin-of-header .person img {
+        width: 30px;
+        height: 30px;
+    }
+    main .chatbox .header .begin-of-header .person p {
+        font-size: 13px;
+    }
+    main .chatbox .header .begin-of-header .person p span {
+        font-size: 9.5px;
+    }
+    main .chatbox .header > i {
+        font-size: 12px;
+    }
+    main .chatbox .content p:nth-of-type(1),
+    main .chatbox .content p:nth-of-type(2),
+    main .chatbox .content p:nth-of-type(5) {
+        font-size: 7px;
+    }
+    main .chatbox .content .images img {
+        height: 40px;
+        width: 40px;
+    }
+    main .chatbox .content p:nth-of-type(3),
+    main .chatbox .content p:nth-of-type(4) {
+        font-size: 7px;
+    }
+    main .chatbox .content .price1,
+    main .chatbox .content .price2 {
+        font-size: 8px;
+    }
+    main .chatbox .content .price1 span:nth-of-type(2),
+    main .chatbox .content .price2 span:nth-of-type(2) {
+        font-size: 12px;
+    }
+    main .chatbox .content form {
+        margin-top: 4px;
+    }
+    main .chatbox .content form input {
+        padding: 8px 8px 8px 25px;
+    }
+    main .chatbox .content form i {
+        width: 28px;
+        height: 24px;
+    }
+    main .text {
+        text-align: center;
+    }
+    main .text h2 {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+    main .text p {
+        padding: 0 35px;
+    }
+}
